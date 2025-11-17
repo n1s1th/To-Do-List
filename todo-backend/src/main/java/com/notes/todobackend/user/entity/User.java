@@ -1,3 +1,9 @@
+package com.yourcompany.todo.user.entity;
+
+import jakarta.persistence.*;
+import java.time.Instant;
+import java.util.UUID;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -15,5 +21,6 @@ public class User {
 
     private Instant createdAt = Instant.now();
 
-    // getters/setters
+    // getters / setters
+    // ... (generate in IDE)
 }
