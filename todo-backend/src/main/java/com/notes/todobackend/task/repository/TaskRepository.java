@@ -1,6 +1,6 @@
-package com.yourcompany.todo.task.repository;
+package com.notes.todobackend.task.repository;
 
-import com.yourcompany.todo.task.entity.Task;
+import com.notes.todobackend.task.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

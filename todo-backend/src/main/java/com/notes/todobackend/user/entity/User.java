@@ -1,4 +1,4 @@
-package com.yourcompany.todo.user.entity;
+package com.notes.todobackend.user.entity;
 
 import jakarta.persistence.*;
 import java.time.Instant;

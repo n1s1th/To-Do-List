@@ -1,4 +1,4 @@
-package com.yourcompany.todo.task.dto;
+package com.notes.todobackend.task.dto;
 
 import java.time.Instant;
 import java.time.LocalDate;

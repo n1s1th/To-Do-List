@@ -1,12 +1,12 @@
-package com.yourcompany.todo.task.service;
+package com.notes.todobackend.task.service;
 
-import com.yourcompany.todo.list.repository.ListRepository;
-import com.yourcompany.todo.task.dto.CreateTaskRequest;
-import com.yourcompany.todo.task.dto.TaskDto;
-import com.yourcompany.todo.task.entity.Task;
-import com.yourcompany.todo.task.repository.TaskRepository;
-import com.yourcompany.todo.user.entity.User;
-import com.yourcompany.todo.user.repository.UserRepository;
+import com.notes.todobackend.list.repository.ListRepository;
+import com.notes.todobackend.task.dto.CreateTaskRequest;
+import com.notes.todobackend.task.dto.TaskDto;
+import com.notes.todobackend.task.entity.Task;
+import com.notes.todobackend.task.repository.TaskRepository;
+import com.notes.todobackend.user.entity.User;
+import com.notes.todobackend.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

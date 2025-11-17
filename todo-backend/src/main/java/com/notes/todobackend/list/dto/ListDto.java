@@ -1,4 +1,4 @@
-package com.yourcompany.todo.list.dto;
+package com.notes.todobackend.list.dto;
 
 import java.time.Instant;
 import java.util.UUID;

@@ -1,6 +1,6 @@
-package com.yourcompany.todo.user.repository;
+package com.notes.todobackend.user.repository;
 
-import com.yourcompany.todo.user.entity.User;
+import com.notes.todobackend.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

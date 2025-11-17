@@ -1,9 +1,9 @@
-package com.yourcompany.todo.auth.service;
+package com.notes.todobackend.auth.service;
 
-import com.yourcompany.todo.auth.dto.LoginPayload;
-import com.yourcompany.todo.auth.dto.RegisterPayload;
-import com.yourcompany.todo.user.entity.User;
-import com.yourcompany.todo.user.repository.UserRepository;
+import com.notes.todobackend.auth.dto.LoginPayload;
+import com.notes.todobackend.auth.dto.RegisterPayload;
+import com.notes.todobackend.user.entity.User;
+import com.notes.todobackend.user.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 

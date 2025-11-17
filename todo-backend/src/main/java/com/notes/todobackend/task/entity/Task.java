@@ -1,7 +1,7 @@
-package com.yourcompany.todo.task.entity;
+package com.notes.todobackend.task.entity;
 
-import com.yourcompany.todo.list.entity.ListEntity;
-import com.yourcompany.todo.user.entity.User;
+import com.notes.todobackend.list.entity.ListEntity;
+import com.notes.todobackend.user.entity.User;
 import jakarta.persistence.*;
 
 import java.time.Instant;

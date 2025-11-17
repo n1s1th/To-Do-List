@@ -1,10 +1,10 @@
-package com.yourcompany.todo.list.controller;
+package com.notes.todobackend.list.controller;
 
-import com.yourcompany.todo.list.dto.ListDto;
-import com.yourcompany.todo.list.entity.ListEntity;
-import com.yourcompany.todo.list.repository.ListRepository;
-import com.yourcompany.todo.user.entity.User;
-import com.yourcompany.todo.user.repository.UserRepository;
+import com.notes.todobackend.list.dto.ListDto;
+import com.notes.todobackend.list.entity.ListEntity;
+import com.notes.todobackend.list.repository.ListRepository;
+import com.notes.todobackend.user.entity.User;
+import com.notes.todobackend.user.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

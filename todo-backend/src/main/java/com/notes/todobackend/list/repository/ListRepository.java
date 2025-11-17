@@ -1,6 +1,6 @@
-package com.yourcompany.todo.list.repository;
+package com.notes.todobackend.list.repository;
 
-import com.yourcompany.todo.list.entity.ListEntity;
+import com.notes.todobackend.list.entity.ListEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

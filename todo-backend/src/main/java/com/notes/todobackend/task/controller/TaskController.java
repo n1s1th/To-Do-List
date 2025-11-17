@@ -1,8 +1,8 @@
-package com.yourcompany.todo.task.controller;
+package com.notes.todobackend.task.controller;
 
-import com.yourcompany.todo.task.dto.CreateTaskRequest;
-import com.yourcompany.todo.task.dto.TaskDto;
-import com.yourcompany.todo.task.service.TaskService;
+import com.notes.todobackend.task.dto.CreateTaskRequest;
+import com.notes.todobackend.task.dto.TaskDto;
+import com.notes.todobackend.task.service.TaskService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

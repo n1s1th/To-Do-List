@@ -1,10 +1,10 @@
-package com.yourcompany.todo.auth.controller;
+package com.notes.todobackend.auth.controller;
 
-import com.yourcompany.todo.auth.dto.LoginPayload;
-import com.yourcompany.todo.auth.dto.RegisterPayload;
-import com.yourcompany.todo.auth.dto.UserResponse;
-import com.yourcompany.todo.auth.service.AuthService;
-import com.yourcompany.todo.user.entity.User;
+import com.notes.todobackend.auth.dto.LoginPayload;
+import com.notes.todobackend.auth.dto.RegisterPayload;
+import com.notes.todobackend.auth.dto.UserResponse;
+import com.notes.todobackend.auth.service.AuthService;
+import com.notes.todobackend.user.entity.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@RequestBody RegisterPayload p) {
         User u = authService.register(p);
-        return ResponseEntity.status(201).body(new UserResponse(u.getId().toString(), u.getEmail(), u.getDisplayName()));
+        return ResponseEntity.status(201).body(new UserResponse(u.getClass().toString(), u.getEmail(), u.getDisplayName()));
     }
 
     @PostMapping("/login")
