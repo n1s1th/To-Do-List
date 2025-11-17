@@ -1,3 +1,13 @@
+package com.yourcompany.todo.task.entity;
+
+import com.yourcompany.todo.list.entity.ListEntity;
+import com.yourcompany.todo.user.entity.User;
+import jakarta.persistence.*;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.UUID;
+
 @Entity
 @Table(name = "tasks")
 public class Task {
@@ -11,7 +21,7 @@ public class Task {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "list_id")
-    private ListEntity list; // nullable => Inbox
+    private ListEntity list;
 
     @Column(nullable = false)
     private String title;
@@ -27,5 +37,9 @@ public class Task {
 
     private Instant createdAt = Instant.now();
     private Instant updatedAt = Instant.now();
-    // getters/setters, @PreUpdate to set updatedAt
+
+    @PreUpdate
+    public void onUpdate() { updatedAt = Instant.now(); }
+
+    // getters/setters
 }
