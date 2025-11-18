@@ -17,7 +17,7 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@RequestBody RegisterPayload p) {
         User u = authService.register(p);
-        return ResponseEntity.status(201).body(new UserResponse(u.getClass().toString(), u.getEmail(), u.getDisplayName()));
+        return ResponseEntity.status(201).body(new UserResponse(u.getId().toString(), u.getEmail(), u.getDisplayName()));
     }
 
     @PostMapping("/login")

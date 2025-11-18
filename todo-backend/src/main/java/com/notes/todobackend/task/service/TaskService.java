@@ -10,7 +10,6 @@ import com.notes.todobackend.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -39,7 +38,7 @@ public class TaskService {
     public TaskDto create(CreateTaskRequest req) {
         var user = getDemoUser();
         Task t = new Task();
-        t.User(user);
+        t.setUser(user);
         t.setTitle(req.title());
         t.setDescription(req.description());
         t.setCreatedAt(Instant.now());
@@ -54,12 +53,18 @@ public class TaskService {
 
     private TaskDto toDto(Task t) {
         return new TaskDto(
-                t.getId(), t.getUser().getId(),
+                t.getId(),
+                t.getUser().getId(),
                 t.getList() != null ? t.getList().getId() : null,
-                t.getTitle(), t.getDescription(),
-                t.isCompleted(), t.isImportant(),
-                t.getDueAt(), t.getMyDayDate(),
-                t.getPriority(), t.getCreatedAt(), t.getUpdatedAt()
+                t.getTitle(),
+                t.getDescription(),
+                t.isCompleted(),
+                t.isImportant(),
+                t.getDueAt(),
+                t.getMyDayDate(),
+                t.getPriority(),
+                t.getCreatedAt(),
+                t.getUpdatedAt()
         );
     }
 }
