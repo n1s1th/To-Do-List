@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth, AuthProvider } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
@@ -12,7 +12,7 @@ import ListSection from '@/components/lists/ListSection';
 import { List, Task } from '@/lib/types';
 import { api } from '@/lib/api';
 
-export default function HomePage() {
+function HomePageContent() {
   const { user, loading: authLoading, logout } = useAuth();
   const router = useRouter();
 
@@ -111,5 +111,13 @@ export default function HomePage() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <AuthProvider>
+      <HomePageContent />
+    </AuthProvider>
   );
 }
