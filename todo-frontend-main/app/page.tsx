@@ -63,7 +63,7 @@ export default function HomePage() {
     if (user) refetchTasks();
   }, [activeView, activeListId, user]);
 
-  if (authLoading || isLoading) {
+  if (authLoading || isLoading || !user) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-xl">Loading...</div>
