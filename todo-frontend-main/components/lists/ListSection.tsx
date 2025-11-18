@@ -127,7 +127,7 @@ export default function ListSection({ list, tasks, onTaskUpdate }: ListSectionPr
 
       <div className="space-y-2">
         {tasks.length === 0 ? (
-          <p className="text-gray-500 italic">No tasks in this list</p>
+          <p className="text-gray-500 italic">List is empty</p>
         ) : (
           tasks.map(task => (
             <TaskItem
