@@ -2,7 +2,7 @@
 
 import { User, List, Task, RegisterPayload, LoginPayload, CreateListPayload, CreateTaskPayload, UpdateTaskPayload, TaskQueryParams } from './types';
 
-const API_BASE = '/api'; 
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || '/api'; 
 
 // Mock data — simulates DB. Replace with real fetch() when backend ready.
 const MOCK_USER: User = {
