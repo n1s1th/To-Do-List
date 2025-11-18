@@ -39,7 +39,7 @@ public class TaskService {
     public TaskDto create(CreateTaskRequest req) {
         var user = getDemoUser();
         Task t = new Task();
-        t.setUser(user);
+        t.User(user);
         t.setTitle(req.title());
         t.setDescription(req.description());
         t.setCreatedAt(Instant.now());

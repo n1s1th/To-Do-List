@@ -33,7 +33,7 @@ public class ListController {
     public List<ListDto> getLists() {
         var user = getDemoUser();
         return listRepository.findByUserId(user.getId()).stream()
-                .map(l -> new ListDto(l.getId(), l.getUser().getId(), l.getName(), l.getCreatedAt()))
+                .map(l -> new ListDto(l.getId(), l.equals().getId(), l.getName(), l.getCreatedAt()))
                 .collect(Collectors.toList());
     }
 

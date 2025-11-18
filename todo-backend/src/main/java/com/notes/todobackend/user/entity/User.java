@@ -18,11 +18,23 @@ public class User {
     @Column(nullable = false)
     private String passwordHash;
 
+    @Column(name = "display_name")
     private String displayName;
 
+    @Column(name = "created_at")
     private Instant createdAt = Instant.now();
 
-    // --- Add these getter and setter methods ---
+    // ----- Constructors -----
+    public User() {}
+
+    public User(String email, String passwordHash, String displayName) {
+        this.email = email;
+        this.passwordHash = passwordHash;
+        this.displayName = displayName;
+        this.createdAt = Instant.now();
+    }
+
+    // ----- Getters & Setters -----
     public UUID getId() {
         return id;
     }

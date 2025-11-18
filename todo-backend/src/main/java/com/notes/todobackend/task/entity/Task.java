@@ -29,7 +29,7 @@ public class Task {
     @Column(columnDefinition = "text")
     private String description;
 
-    private boolean isCompleted = false;
+    public boolean isCompleted = false;
     private boolean isImportant = false;
     private Instant dueAt;
     private LocalDate myDayDate;
@@ -40,6 +40,56 @@ public class Task {
 
     @PreUpdate
     public void onUpdate() { updatedAt = Instant.now(); }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void User(User user) {
+    }
+
+    public void setDescription(String description) {
+    }
+
+    public void setCreatedAt(Instant now) {
+    }
+
+    public void setPriority(Short priority) {
+    }
+
+    public UUID getId() {
+    }
+
+    public void setList(@org.jetbrains.annotations.NotNull ListEntity listEntity) {
+    }
+
+    public Task getUser() {
+    }
+
+    public Task getList() {
+    }
+
+    public String getDescription() {
+    }
+
+    public Instant getDueAt() {
+    }
+
+    public LocalDate getMyDayDate() {
+    }
+
+    public short getPriority() {
+    }
+
+    public Instant getCreatedAt() {
+    }
+
+    public Instant getUpdatedAt() {
+    }
 
     // getters/setters
 }
