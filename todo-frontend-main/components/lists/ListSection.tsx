@@ -65,7 +65,6 @@ export default function ListSection({ list, tasks, onTaskUpdate }: ListSectionPr
   const handleListDelete = async () => {
     if (confirm(`Delete list "${list.name}" and its tasks?`)) {
       await api.lists.delete(list.id);
-      // Parent should navigate away → handled by HomePage via refetch + nav reset
       onTaskUpdate();
     }
   };
