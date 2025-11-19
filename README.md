@@ -7,5 +7,4 @@ TypeScript - Type-safe development
 Tailwind CSS - Utility-first CSS framework
 Backend
 Spring Boot 3.5.7 - Java backend framework
-PostgreSQL - Relational database
-.
+PostgreSQL - Relational database//
